@@ -2,52 +2,15 @@
 
 <h1><u>SpeechPath</u></h1>
 
+<h3>Select a sound below to get started!</h3>
+
 <div class="grid grid-pad">
-  <a class="col-1-4">
-    <div class="module">
-      <h2>p</h2>
-    </div>
+
+  <a class="col-1-4" *ngFor="let sound of sounds">
+      <div class="module">
+        <h2>{{ sound.sound }}</h2>
+        <p>{{ sound.phonetic }}</p>
+      </div>
   </a>
 
-  <a class="col-1-4">
-    <div class="module">
-      <h2>b</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>m</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>d</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>n</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>t</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>k</h2>
-    </div>
-  </a>
-
-  <a class="col-1-4">
-    <div class="module">
-      <h2>g</h2>
-    </div>
-  </a>
 </div>

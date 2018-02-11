@@ -16,13 +16,8 @@ a {
   text-decoration: none;
 }
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 h1 {
+  font-size: 50px;
   text-align: center; 
   margin-top: 20px;
   margin-bottom: 20px;
@@ -34,6 +29,22 @@ h2 {
   position: relative;
   font-size: 40px;
   font-family: 'Rammetto One', cursive;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Rammetto One', cursive;
+  color: white;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -66,20 +77,4 @@ h2 {
 
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
-}
-
-@media (max-width: 600px) {
-  .module {
-    font-size: 10px;
-    max-height: 75px; }
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    margin: 0;
-  }
-
-  .module {
-    min-width: 60px;
-  }
 }
