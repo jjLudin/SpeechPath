@@ -1,5 +1,6 @@
 /* CSS styles */
 
+/* Home Page - Grids */
 [class*='col-'] {
   float: left;
   padding-left: 20px;
@@ -16,15 +17,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 50px;
-  text-align: center; 
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: 'Rammetto One', cursive;
-  color: white;
-}
-
 h2 {
   position: relative;
   font-size: 40px;
@@ -35,6 +27,7 @@ h3 {
   text-align: center;
   font-family: 'Rammetto One', cursive;
   color: white;
+  padding-top: 80px;
 }
 
 p {
@@ -77,4 +70,43 @@ p {
 
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
+}
+
+
+/* Navigation Bar */
+
+#nav {
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: deepskyblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Rammetto One', cursive;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgb(58, 57, 57);
 }
