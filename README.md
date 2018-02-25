@@ -1,7 +1,4 @@
-# SpeechPath
-
-A web application that provides help by teaching users how to pronounce the sounds in the English language. 
-User will be involved in fun learning activities!  
+# SpeechPath 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
 
