@@ -1,0 +1,21 @@
+<!-- Navigation Bar -->
+
+<ul id="nav">
+  <li><a href="#" class="active">SpeechPath</a></li>
+  <li><a routerLink="/news">News</a></li>
+  <li><a routerLink="/contact">Contact</a></li>
+  <li><a routerLink="/about">About</a></li>
+</ul>
+
+<!-- Grids -->
+
+<h3>Select a sound below to get started!</h3>
+
+<div class="grid grid-pad">
+  <a class="col-1-4" *ngFor="let sound of sounds" [routerLink]="['/prompt', sound.sound]">
+      <div class="module">
+        <h2>{{ sound.sound }}</h2>
+        <p>{{ sound.phonetic }}</p>
+      </div>
+  </a>
+</div>

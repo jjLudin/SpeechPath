@@ -1,0 +1,112 @@
+/* CSS styles */
+
+/* Home Page - Grids */
+[class*='col-'] {
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h2 {
+    position: relative;
+    font-size: 40px;
+    font-family: 'Rammetto One', cursive;
+  }
+  
+  h3 {
+    text-align: center;
+    font-family: 'Rammetto One', cursive;
+    color: white;
+    padding-top: 80px;
+  }
+  
+  p {
+    font-family: sans-serif;
+  }
+  
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .grid {
+    margin: 0;
+  }
+  
+  .col-1-4 {
+    width: 25%;
+  }
+  
+  .module {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    max-height: 200px;
+    min-width: 200px;
+    background-color: antiquewhite;
+    border-radius: 2px;
+  }
+  
+  .module:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .grid-pad {
+    padding: 10px 0;
+  }
+  
+  .grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+  
+  
+  /* Navigation Bar */
+  
+  #nav {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: deepskyblue;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Rammetto One', cursive;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: rgb(58, 57, 57);
+  }
