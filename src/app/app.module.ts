@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
-
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,7 +23,7 @@ import { PromptComponent } from './prompt/prompt.component';
   imports: [
     BrowserModule,
     FormsModule,
-    Routing
+    Routing,
   ],
   providers: [],
   bootstrap: [AppComponent]
