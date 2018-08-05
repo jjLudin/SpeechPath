@@ -10,6 +10,7 @@ import { NewsComponent } from './news/news.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { PromptComponent } from './prompt/prompt.component';
+import { FlashcardsComponent } from './flashcards/flashcards.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PromptComponent } from './prompt/prompt.component';
     NewsComponent,
     ContactComponent,
     AboutComponent,
-    PromptComponent
+    PromptComponent,
+    FlashcardsComponent
   ],
   imports: [
     BrowserModule,

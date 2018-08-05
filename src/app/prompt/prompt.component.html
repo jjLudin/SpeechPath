@@ -2,7 +2,7 @@
     <div id="content">
         <h2><u>Sound: {{sound}}</u></h2>
         <h2>Choose an activity!</h2>
-        <button class="button">Flash Cards</button>
+        <button class="button" [routerLink]="['/flashcards', sound]">Flash Cards</button>
         <button class="button">Story Mode<br/>(Coming Soon)</button>
         <button class="button">Matching Game<br/>(Coming Soon)</button>
     </div>

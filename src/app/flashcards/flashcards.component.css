@@ -1,0 +1,44 @@
+#container {
+    width: 80%;
+    margin: 150px auto;
+    background-color: white;
+}
+
+#content {
+    padding: 50px;
+    text-align: center;
+}
+
+#content h2 {
+    font-family: 'Rammetto One', cursive;
+}
+
+.wrapper {
+    display: inline-block;
+    height: 210px;
+    vertical-align: top;
+}
+
+.image-wrapper {
+    display: inline-block;   
+    vertical-align: top;
+    height: 200px;
+    padding: 10px;
+}
+
+.button-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    height: 200px;
+    padding: 10px;
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}
+
+input {
+    width: 40px;
+    height: 200px;
+}

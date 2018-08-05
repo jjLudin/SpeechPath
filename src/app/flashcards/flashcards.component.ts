@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'prompt',
-    templateUrl: './prompt.component.html',
-    styleUrls: ['./prompt.component.css']
+    selector: 'flashcards',
+    templateUrl: './flashcards.component.html',
+    styleUrls: ['./flashcards.component.css']
 })
-export class PromptComponent implements OnInit {
+export class FlashcardsComponent {
     sound: string;
 
     // Inject the activated route
@@ -16,4 +16,12 @@ export class PromptComponent implements OnInit {
         // This is where we grab the sound
         this.sound = this.route.snapshot.params.sound;
     }
+}
+
+var images = ['potato.jpg', 'stamp.jpg'];
+var index = 0;
+
+function switchImage(i) {
+    index += i;
+    return images[index];
 }
