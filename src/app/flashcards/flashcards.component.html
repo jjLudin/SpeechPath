@@ -3,15 +3,9 @@
         <h2><u>Sound: {{sound}}</u></h2>
 
         <div class="wrapper">
-            <div class="button-wrapper">
-                <input type="submit" value="<"/>
-            </div>
-            <div class="image-wrapper">
-                <img src="assets/img/flashcards/{{sound}}/potato.jpg" alt="image">
-            </div>
-            <div class="button-wrapper">
-                <input type="submit" value=">"/>
-            </div>
+            <button (click)="switchImage(-1)">Prev</button>
+                <img src={{switchImage()}}>
+            <button (click)="switchImage(1)">Next</button>
         </div>
     </div>
 </div>

@@ -8,6 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FlashcardsComponent {
     sound: string;
+    index: number;
+    i: number;
+    Flashcards = [];
 
     // Inject the activated route
     constructor(private route: ActivatedRoute) {}
@@ -15,13 +18,21 @@ export class FlashcardsComponent {
     ngOnInit() {
         // This is where we grab the sound
         this.sound = this.route.snapshot.params.sound;
+        this.index = 0;
+        this.Flashcards = [
+            {
+                key: 'Potato',
+                image: '../../assets/img/flashcards/' + this.sound + '/potato.jpg'
+            },
+            {
+                key: 'Stamp',
+                image: '../../assets/img/flashcards/' + this.sound + '/stamp.jpg'
+            }
+        ];
     }
-}
 
-var images = ['potato.jpg', 'stamp.jpg'];
-var index = 0;
-
-function switchImage(i) {
-    index += i;
-    return images[index];
+    switchImage(i = 0) {
+        this.index += i;
+        return this.Flashcards[this.index].image;
+    }
 }
