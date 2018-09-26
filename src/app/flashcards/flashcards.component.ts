@@ -7,11 +7,9 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./flashcards.component.css']
 })
 export class FlashcardsComponent {
-    sound: string;
-    index: number;
-    Flashcards = [];
-    flashcardKey: string;
-    flashcardImg: string;
+    sound: string; index: number; lenOfWords: number;
+    p: string[]; b: string[];
+    Flashcards = []; flashcardKey: string; flashcardImg: string;
 
     // Inject the activated route
     constructor(private route: ActivatedRoute) {}
@@ -20,6 +18,20 @@ export class FlashcardsComponent {
         // Initialization + This is where we grab the sound
         this.sound = this.route.snapshot.params.sound;
         this.index = 0;
+
+        // Sounds and their words corresponding to their images
+        this.p = ['Potato', 'Stamp', 'Ship', 'Apple', 'Dimple', 'Pants', 'Staples', 'Park', 'Pickle', 'Paint'];
+        this.b = ['Bat', 'Beetle', 'Cab', 'Bus'];
+
+        switch (this.sound) {
+            case 'p':
+                this.lenOfWords = this.p.length;
+                break;
+            case 'b':
+                this.lenOfWords = this.b.length;
+                break;
+        }
+
         this.Flashcards = [
             {
                 key: 'Potato',
@@ -62,6 +74,7 @@ export class FlashcardsComponent {
                 image: '../../assets/img/flashcards/' + this.sound + '/image10.jpg'
             }
         ];
+
         this.flashcardKey = this.Flashcards[0].key;
         this.flashcardImg = this.Flashcards[0].image;
     }
