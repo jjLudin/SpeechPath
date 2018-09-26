@@ -3,9 +3,10 @@
         <h2><u>Sound: {{sound}}</u></h2>
 
         <div class="wrapper">
-            <button (click)="switchImage(-1)">Prev</button>
-                <img src={{switchImage()}}>
-            <button (click)="switchImage(1)">Next</button>
+            <button (click)="switchContext(-1)">Prev</button>
+                <img src={{flashcardImg}}>
+            <button (click)="switchContext(1)">Next</button>
+            <p>{{flashcardKey}}</p>
         </div>
     </div>
 </div>

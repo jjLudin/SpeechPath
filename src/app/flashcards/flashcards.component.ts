@@ -9,30 +9,74 @@ import { ActivatedRoute } from '@angular/router';
 export class FlashcardsComponent {
     sound: string;
     index: number;
-    i: number;
     Flashcards = [];
+    flashcardKey: string;
+    flashcardImg: string;
 
     // Inject the activated route
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit() {
-        // This is where we grab the sound
+        // Initialization + This is where we grab the sound
         this.sound = this.route.snapshot.params.sound;
         this.index = 0;
         this.Flashcards = [
             {
                 key: 'Potato',
-                image: '../../assets/img/flashcards/' + this.sound + '/potato.jpg'
+                image: '../../assets/img/flashcards/' + this.sound + '/image1.jpg'
             },
             {
                 key: 'Stamp',
-                image: '../../assets/img/flashcards/' + this.sound + '/stamp.jpg'
+                image: '../../assets/img/flashcards/' + this.sound + '/image2.jpg'
+            },
+            {
+                key: 'Ship',
+                image: '../../assets/img/flashcards/' + this.sound + '/image3.jpg'
+            },
+            {
+                key: 'Apple',
+                image: '../../assets/img/flashcards/' + this.sound + '/image4.jpg'
+            },
+            {
+                key: 'Dimple',
+                image: '../../assets/img/flashcards/' + this.sound + '/image5.jpg'
+            },
+            {
+                key: 'Pants',
+                image: '../../assets/img/flashcards/' + this.sound + '/image6.jpg'
+            },
+            {
+                key: 'Staples',
+                image: '../../assets/img/flashcards/' + this.sound + '/image7.jpg'
+            },
+            {
+                key: 'Park',
+                image: '../../assets/img/flashcards/' + this.sound + '/image8.jpg'
+            },
+            {
+                key: 'Pickle',
+                image: '../../assets/img/flashcards/' + this.sound + '/image9.jpg'
+            },
+            {
+                key: 'Paint',
+                image: '../../assets/img/flashcards/' + this.sound + '/image10.jpg'
             }
         ];
+        this.flashcardKey = this.Flashcards[0].key;
+        this.flashcardImg = this.Flashcards[0].image;
     }
 
-    switchImage(i = 0) {
+    switchContext(i = 0) {
         this.index += i;
-        return this.Flashcards[this.index].image;
+        // Lower bound
+        if (this.index < 0) {
+            this.index = 0;
+        }
+        // Upper bound
+        if (this.index >= this.Flashcards.length) {
+            this.index = this.Flashcards.length - 1;
+        }
+        this.flashcardKey = this.Flashcards[this.index].key;
+        this.flashcardImg = this.Flashcards[this.index].image;
     }
 }
