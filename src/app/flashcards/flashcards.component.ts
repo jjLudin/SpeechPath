@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./flashcards.component.css']
 })
 export class FlashcardsComponent {
-    sound: string; index: number; lenOfWords: number;
+    sound: string; index: number; lenOfWords: number; soundsList: string[];
     p: string[]; b: string[];
     Flashcards = []; flashcardKey: string; flashcardImg: string;
 
@@ -15,9 +15,10 @@ export class FlashcardsComponent {
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit() {
-        // Initialization + This is where we grab the sound
+        // This is where we grab the sound
         this.sound = this.route.snapshot.params.sound;
         this.index = 0;
+        this.soundsList = [];
 
         // Sounds and their words corresponding to their images
         this.p = ['Potato', 'Stamp', 'Ship', 'Apple', 'Dimple', 'Pants', 'Staples', 'Park', 'Pickle', 'Paint'];
@@ -25,56 +26,24 @@ export class FlashcardsComponent {
 
         switch (this.sound) {
             case 'p':
+                this.soundsList = this.p;
                 this.lenOfWords = this.p.length;
                 break;
             case 'b':
+                this.soundsList = this.b;
                 this.lenOfWords = this.b.length;
                 break;
         }
 
-        this.Flashcards = [
-            {
-                key: 'Potato',
-                image: '../../assets/img/flashcards/' + this.sound + '/image1.jpg'
-            },
-            {
-                key: 'Stamp',
-                image: '../../assets/img/flashcards/' + this.sound + '/image2.jpg'
-            },
-            {
-                key: 'Ship',
-                image: '../../assets/img/flashcards/' + this.sound + '/image3.jpg'
-            },
-            {
-                key: 'Apple',
-                image: '../../assets/img/flashcards/' + this.sound + '/image4.jpg'
-            },
-            {
-                key: 'Dimple',
-                image: '../../assets/img/flashcards/' + this.sound + '/image5.jpg'
-            },
-            {
-                key: 'Pants',
-                image: '../../assets/img/flashcards/' + this.sound + '/image6.jpg'
-            },
-            {
-                key: 'Staples',
-                image: '../../assets/img/flashcards/' + this.sound + '/image7.jpg'
-            },
-            {
-                key: 'Park',
-                image: '../../assets/img/flashcards/' + this.sound + '/image8.jpg'
-            },
-            {
-                key: 'Pickle',
-                image: '../../assets/img/flashcards/' + this.sound + '/image9.jpg'
-            },
-            {
-                key: 'Paint',
-                image: '../../assets/img/flashcards/' + this.sound + '/image10.jpg'
-            }
-        ];
+        // Store the keys and images
+        for (let s = 0; s < this.lenOfWords; s++) {
+            this.Flashcards.push({
+                key: this.soundsList[s],
+                image: '../../assets/img/flashcards/' + this.sound + '/image' + (s + 1) + '.jpg'
+            });
+        }
 
+        // Initial key and image
         this.flashcardKey = this.Flashcards[0].key;
         this.flashcardImg = this.Flashcards[0].image;
     }
