@@ -2,11 +2,10 @@
     <div id="content">
         <h2><u>Sound: {{sound}}</u></h2>
 
-        <div class="wrapper">
-            <button (click)="switchContext(-1)">Prev</button>
-                <img src={{flashcardImg}}>
-            <button (click)="switchContext(1)">Next</button>
-            <p>{{flashcardKey}}</p>
-        </div>
+        <button id="prevNextButtons" (click)="switchContext(-1)"><</button>
+            <img src={{flashcardImg}}>
+        <button id="prevNextButtons" (click)="switchContext(1)">></button>
+        
+        <p>{{flashcardKey}}</p>
     </div>
 </div>
