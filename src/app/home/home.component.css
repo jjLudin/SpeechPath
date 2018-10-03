@@ -2,10 +2,7 @@
 
 [class*='col-'] {
   float: left;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 [class*='col-']:last-of-type {
@@ -26,7 +23,7 @@ h3 {
   text-align: center;
   font-family: 'Rammetto One', cursive;
   color: white;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 p {
