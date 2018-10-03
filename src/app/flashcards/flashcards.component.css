@@ -1,6 +1,6 @@
 #container {
     height: 85vh;
-    width: 60%;
+    width: 80%;
     margin: 80px auto;
     background-color: white;
 }
@@ -26,13 +26,13 @@
     font-size: 50px;
     cursor: pointer;
     font-family: 'Rammetto One', cursive;
-    background-color: white;
+    background-color: transparent;
     color: deepskyblue;
     border: none;
 }
 
 img {
-    width: 40vw;
+    width: 30vw;
     height: 60vh;
     max-width: 100%;
     max-height: 100%;
